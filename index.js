@@ -8,24 +8,6 @@ const prevBtn = document.getElementById("prev");
 const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
 
-// const music = [
-//   {
-//     id: 1,
-//     audio_src: "./music/hey.mp3",
-//     img_src: "./images/hey.jpg",
-//   },
-//   {
-//     id: 2,
-//     audio_src: "./music/summer.mp3",
-//     img_src: "./images/summer.jpg",
-//   },
-//   {
-//     id: 3,
-//     audio_src: "./music/ukelele.mp3",
-//     img_src: "./images/ukelele.jpg",
-//   },
-// ];
-
 const songs = ["hey", "summer", "ukulele"];
 
 songIndex = 1;
@@ -36,7 +18,7 @@ loadSongs(songs[songIndex]);
 function loadSongs(song) {
   title.innerText = song;
   audio.src = `music/${song}.mp3`;
-  cover.src = `/images/${song}.jpg`;
+  cover.src = `images/${song}.jpg`;
 }
 
 // Play Song
