@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(23.8%, #f7f7f7), color-stop(92%, #fcdddd));
+  background-image: linear-gradient(0deg, #f7f7f7 23.8%, #fcdddd 92%);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.music-container {
+  background-color: #fff;
+  -webkit-box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+          box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+  padding: 20px 30px;
+  z-index: 10;
+  position: relative;
+}
+
+.music-container .music-info {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: calc(100% - 40px);
+  position: absolute;
+  top: 0;
+  border-radius: 15px 15px 0 0;
+  opacity: 0;
+  padding: 5px 5px 5px 150px;
+  -webkit-transform: translateY(-70%);
+          transform: translateY(-70%);
+  -webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  z-index: 0;
+}
+
+.music-container .music-info .progress-container {
+  margin: 10px 0;
+  height: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  background-color: #fff;
+}
+
+.music-container .music-info .progress-container .progress {
+  width: 0%;
+  background-color: #fe8daa;
+  border-radius: 5px;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transition: width 0.1s linear;
+  transition: width 0.1s linear;
+}
+
+.music-container .img-container {
+  position: relative;
+  width: 110px;
+}
+
+.music-container .img-container img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 110px;
+  width: inherit;
+  border-radius: 50%;
+  -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.music-container .img-container::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.music-container .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.music-container .navigation .action-btn {
+  padding: 10px;
+  background-color: inherit;
+  border: none;
+  font-size: 20px;
+  color: #dfdbdf;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.music-container .navigation .action-btn:focus {
+  outline: 0;
+}
+
+.music-container .navigation .action-btn-big {
+  color: #cdc2d0;
+  font-size: 30px;
+}
+
+.music-container.play .img-container img {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
